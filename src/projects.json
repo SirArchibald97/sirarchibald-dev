@@ -1,0 +1,46 @@
+{
+    "projects": [
+        {
+            "name": "Alex",
+            "link": "https://alex.sirarchibald.dev",
+            "description": "A Discord bot to view information about the MCC event including results from past events, the current teams and stats from the Hall of Fame. Check out more information about Alex on its website!",
+            "image": "alex.png",
+            "tags": [ "discord", "javascript", "node.js", "mongodb" ]
+        },
+        {
+            "name": "Centurion",
+            "link": null,
+            "description": "An RPG-style Discord bot for a community server, featuring custom built currency, inventory, shops, and items. This was developed for a community server owned by a friend and influencer.",
+            "image": "Centurion.jpeg",
+            "tags": [ "discord", "javascript", "node.js", "mysql" ]
+        },
+        {
+            "name": "Pushback",
+            "link": null,
+            "description": "A Roblox duelling game, built by myself and a friend, in which players battle to push each other off an arena. It features custom built maps, weapon skins, shops and crates and leaderboards.",
+            "image": "montogo.png",
+            "tags": [ "roblox", "lua" ]
+        },
+        {
+            "name": "King of the Hill",
+            "link": "https://github.com/SirArchibald97/koth",
+            "description": "A Minecraft plugin to play the King of the Hill gamemode, custom build for a private server. It includes kits, some custom items, and a database to store player stats.",
+            "image": "koth.png",
+            "tags": [ "minecraft", "kotlin", "paper", "mongodb" ]
+        },
+        {
+            "name": "Blair's Brainiacs",
+            "link": "https://discord.gg/blairsbrainiacs",
+            "description": "Formed over lockdown, Blair's Brainiacs became the largest study community in the UK! I helped administrate the server, as well as developed several bots to handle moderation, an economy and custom minigames.",
+            "image": "bb.webp",
+            "tags": [ "discord", "javascript", "node.js", "mysql" ]
+        },
+        {
+            "name": "Discord Bot Template",
+            "link": "https://github.com/SirArchibald97/discord-bot-template-v14",
+            "description": "A GitHub template to easily create a Discord bot quickly, built with Discord.js v14. It includes a custom built command handler and event listeners.",
+            "image": "discord.webp",
+            "tags": [ "discord", "javascript", "node.js" ]
+        }
+    ]
+}
