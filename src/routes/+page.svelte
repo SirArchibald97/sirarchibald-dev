@@ -63,7 +63,7 @@
                     other info about me!
                 </p>
                 <p class="dark:text-slate-50 text-lg pt-4 pl-4">
-                    I have 8 years experience with programming and mostly develop for Minecraft and the web. I'm currently studying an undergraduate degree in Software Engineering, where I am 
+                    I have 8 years experience with programming and mostly develop for Minecraft and the web. I'm currently studying an undergraduate degree in software engineering, where I am 
                     in my third and final year.
                 </p>
                 <p class="dark:text-slate-50 text-lg pt-4 pl-4">
