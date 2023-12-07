@@ -59,7 +59,7 @@
             <div id="aboutme">
                 <h1 class="dark:text-slate-50 text-4xl font-bold mb-4 text-center sm:text-left">👋 Hi, I'm Archie!</h1>
                 <p class="dark:text-slate-50 text-lg pt-4 pl-4 text-center sm:text-left">
-                    I'm a {age()} year old developer from the UK who loves building fun things! I created this website to showcase some of my own work, teams I have been a part of, as well as 
+                    I'm a {age()} year old developer from the UK, and I go by SirArchibald online. I created this website to showcase some of my own work, teams I have been a part of, as well as 
                     other info about me!
                 </p>
                 <p class="dark:text-slate-50 text-lg pt-4 pl-4">
