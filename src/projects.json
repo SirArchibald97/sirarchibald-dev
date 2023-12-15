@@ -3,44 +3,48 @@
         {
             "name": "Alex",
             "link": "https://alex.sirarchibald.dev",
+            "page": "/alex",
             "description": "A Discord bot to view information about the MCC event including results from past events, the current teams and stats from the Hall of Fame. Check out more information about Alex on its website!",
             "image": "alex.png",
-            "tags": [ "discord", "javascript", "node.js", "mongodb" ]
+            "tags": [ "Discord", "JavaScript", "Node.js", "MongoDB" ]
         },
         {
             "name": "Centurion",
-            "link": null,
+            "link": "https://github.com/SirArchibald97/centurion-public",
+            "page": "/centurion",
             "description": "An RPG-style Discord bot for a community server, featuring custom built currency, inventory, shops, and items. This was developed for a community server owned by a friend and influencer.",
             "image": "Centurion.jpeg",
-            "tags": [ "discord", "javascript", "node.js", "mysql" ]
+            "tags": [ "Discord", "JavaScript", "Node.js", "MySQL" ]
         },
         {
             "name": "Pushback",
             "link": null,
-            "description": "A Roblox duelling game, built by myself and a friend, in which players battle to push each other off an arena. It features custom built maps, weapon skins, shops and crates and leaderboards.",
+            "page": "/pushback",
+            "description": "A Roblox duelling game, built by myself and a business partner, in which players battle to push each other off an arena. It features custom built maps, weapon skins, shops and crates and leaderboards.",
             "image": "montogo.png",
-            "tags": [ "roblox", "lua" ]
+            "tags": [ "Roblox", "Lua" ]
         },
         {
-            "name": "King of the Hill",
-            "link": "https://github.com/SirArchibald97/koth",
-            "description": "A Minecraft plugin to play the King of the Hill gamemode, custom build for a private server. It includes kits, some custom items, and a database to store player stats.",
-            "image": "koth.png",
-            "tags": [ "minecraft", "kotlin", "paper", "mongodb" ]
+            "name": "PocketGames",
+            "link": "https://github.com/SirArchibald97/pocket-games",
+            "page": "/pocket-games",
+            "description": "A Minecraft plugin which adds several minigames to your server, including classics like Rock Paper Scissors and Tic Tac Toe as well as originals such as Fish Match! Features multiplayer modes as well as an in-built database to store player stats and leaderboards.",
+            "image": "minecraft.png",
+            "tags": [ "Minecraft", "Kotlin", "Paper", "SQLite" ]
         },
         {
             "name": "Blair's Brainiacs",
             "link": "https://discord.gg/blairsbrainiacs",
             "description": "Formed over lockdown, Blair's Brainiacs became the largest study community in the UK! I helped administrate the server, as well as developed several bots to handle moderation, an economy and custom minigames.",
             "image": "bb.webp",
-            "tags": [ "discord", "javascript", "node.js", "mysql" ]
+            "tags": [ "Discord", "JavaScript", "Node.js", "MySQL" ]
         },
         {
             "name": "Discord Bot Template",
             "link": "https://github.com/SirArchibald97/discord-bot-template-v14",
             "description": "A GitHub template to easily create a Discord bot quickly, built with Discord.js v14. It includes a custom built command handler and event listeners.",
             "image": "discord.webp",
-            "tags": [ "discord", "javascript", "node.js" ]
+            "tags": [ "Discord", "JavaScript", "Node.js" ]
         }
     ]
 }

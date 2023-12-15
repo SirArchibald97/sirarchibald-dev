@@ -3,37 +3,32 @@
         {
             "name": "GitHub",
             "url": "https://www.github.com/sirarchibald97",
-            "icon": "fa-brands fa-github",
-            "from": "from-green-500",
-            "to": "to-slate-800"
+            "icon": "fa-brands fa-github"
         },
         {
             "name": "Twitter",
             "url": "https://twitter.com/sirarchibald97",
-            "icon": "fa-brands fa-twitter",
-            "from": "from-green-500",
-            "to": "to-slate-800"
+            "icon": "fa-brands fa-twitter"
         },
         {
             "name": "YouTube",
             "url": "https://www.youtube.com/@sirarchibald",
-            "icon": "fa-brands fa-youtube",
-            "from": "vgreen-500",
-            "to": "to-slate-800"
+            "icon": "fa-brands fa-youtube"
         },
         {
             "name": "Twitch",
             "url": "https://www.twitch.tv/sirarchibald97",
-            "icon": "fa-brands fa-twitch",
-            "from": "from-green-500",
-            "to": "to-slate-800"
+            "icon": "fa-brands fa-twitch"
         },
         {
             "name": "Discord",
-            "url": null,
-            "icon": "fa-brands fa-discord",
-            "from": "from-green-500",
-            "to": "to-slate-800"
+            "url": "https://discordapp.com/users/398890149607637013",
+            "icon": "fa-brands fa-discord"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/archiemargretts",
+            "icon": "fa-brands fa-linkedin-in"
         }
     ]
 }
