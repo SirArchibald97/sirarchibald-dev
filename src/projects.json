@@ -6,7 +6,8 @@
             "page": "/alex",
             "description": "A Discord bot to view information about the MCC event including results from past events, the current teams and stats from the Hall of Fame. Check out more information about Alex on its website!",
             "image": "alex.png",
-            "tags": [ "Discord", "JavaScript", "Node.js", "MongoDB" ]
+            "tags": [ "Discord", "JavaScript", "Node.js", "MongoDB" ],
+            "extra": true
         },
         {
             "name": "Centurion",
@@ -14,7 +15,8 @@
             "page": "/centurion",
             "description": "An RPG-style Discord bot for a community server, featuring custom built currency, inventory, shops, and items. This was developed for a community server owned by a friend and influencer.",
             "image": "Centurion.jpeg",
-            "tags": [ "Discord", "JavaScript", "Node.js", "MySQL" ]
+            "tags": [ "Discord", "JavaScript", "Node.js", "MySQL" ],
+            "extra": true
         },
         {
             "name": "Pushback",
@@ -22,7 +24,8 @@
             "page": "/pushback",
             "description": "A Roblox duelling game, built by myself and a business partner, in which players battle to push each other off an arena. It features custom built maps, weapon skins, shops and crates and leaderboards.",
             "image": "montogo.png",
-            "tags": [ "Roblox", "Lua" ]
+            "tags": [ "Roblox", "Lua" ],
+            "extra": true
         },
         {
             "name": "PocketGames",
@@ -30,21 +33,24 @@
             "page": "/pocket-games",
             "description": "A Minecraft plugin which adds several minigames to your server, including classics like Rock Paper Scissors and Tic Tac Toe as well as originals such as Fish Match! Features multiplayer modes as well as an in-built database to store player stats and leaderboards.",
             "image": "minecraft.png",
-            "tags": [ "Minecraft", "Kotlin", "Paper", "SQLite" ]
+            "tags": [ "Minecraft", "Kotlin", "Paper", "SQLite" ],
+            "extra": true
         },
         {
             "name": "Blair's Brainiacs",
             "link": "https://discord.gg/blairsbrainiacs",
             "description": "Formed over lockdown, Blair's Brainiacs became the largest study community in the UK! I helped administrate the server, as well as developed several bots to handle moderation, an economy and custom minigames.",
             "image": "bb.webp",
-            "tags": [ "Discord", "JavaScript", "Node.js", "MySQL" ]
+            "tags": [ "Discord", "JavaScript", "Node.js", "MySQL" ],
+            "extra": false
         },
         {
             "name": "Discord Bot Template",
             "link": "https://github.com/SirArchibald97/discord-bot-template-v14",
             "description": "A GitHub template to easily create a Discord bot quickly, built with Discord.js v14. It includes a custom built command handler and event listeners.",
             "image": "discord.webp",
-            "tags": [ "Discord", "JavaScript", "Node.js" ]
+            "tags": [ "Discord", "JavaScript", "Node.js" ],
+            "extra": false
         }
     ]
 }

@@ -14,8 +14,6 @@
         if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) age--;
         return age;
     }
-
-    export let isRoot = true;
 </script>
 
 <head>
@@ -23,7 +21,7 @@
     <script src="https://kit.fontawesome.com/d576307fab.js" crossorigin="anonymous"></script>
 </head>
 
-<div>
+<div class="mx-4 sm:mx-0 mt-2">
     <!-- About Me -->
     <div id="aboutme">
         <h1 class="dark:text-slate-50 text-4xl font-bold mb-4 text-center sm:text-left">👋 Hi, I'm Archie!</h1>
@@ -63,9 +61,11 @@
                             <p class="pl-4 pt-2 pr-2 text-sm">{project.description}</p>
                         </div>
                     </div>
-                    <a href="{project.page ? project.page : ""}" on:click={() => { isRoot = !isRoot }} class="dark:bg-slate-700 bg-slate-200 my-3 p-3 rounded-r flex flex-col justify-center hover:duration-100 hover:scale-110 ease-in-out">
+                    {#if project.extra}
+                    <a href="{project.page ? project.page : ""}" class="dark:bg-slate-700 bg-slate-200 my-3 p-3 rounded-r flex flex-col justify-center hover:duration-100 hover:scale-110 ease-in-out">
                         <ArrowRight />
                     </a>
+                    {/if}
                 </div>
             {/each}
         </div>
@@ -86,9 +86,4 @@
     </div>
 
     <hr class="mt-10 mb-4" />
-
-    <!-- Footer -->
-    <div class="my-6">
-        <p class="text-slate-500">© 2023 SirArchibald</p>
-    </div>
 </div>
