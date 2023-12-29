@@ -3,6 +3,7 @@
     import Link from "../../components/Link.svelte";
     import Tag from "../../components/Tag.svelte";
     import Social from "../../components/Social.svelte";
+    import ExternalLink from "../../svgs/ExternalLink.svelte";
     import { projects } from "../../projects.json";
     import { socials } from "../../socials.json";
 
@@ -19,6 +20,7 @@
 <head>
     <title>SirArchibald.dev</title>
     <script src="https://kit.fontawesome.com/d576307fab.js" crossorigin="anonymous"></script>
+    <meta name="description" content="Hi, I'm Archie! I'm a 20 year old designer and developer from the UK, and I go by SirArchibald online. This is my personal website where you can find out about my work and socials." />
 </head>
 
 <div class="mx-4 sm:mx-0 mt-2">
@@ -26,11 +28,11 @@
     <div id="aboutme">
         <h1 class="dark:text-slate-50 text-4xl font-bold mb-4 text-center sm:text-left">👋 Hi, I'm Archie!</h1>
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4 text-center sm:text-left">
-            I'm a {age()} year old developer and designer from the UK, and I go by SirArchibald online. I am passionate about games design and looking to enter a career in the industry, so 
+            I'm a {age()} year old developer and designer from the UK, and I go by SirArchibald online. I am passionate about design and development and 
             I created this website to showcase some of my own work, teams I have been a part of, as well as other info about me!
         </p>
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4">
-            I have 8 years experience with programming and mostly develop for Minecraft and the web. I'm currently studying an undergraduate degree in software engineering, where I am 
+            I have 8 years experience with programming and mostly develop for Minecraft and the web, which I plan to continue into a career. I'm currently studying an undergraduate degree in software engineering, where I am 
             in my third and final year.
         </p>
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4">
@@ -51,7 +53,7 @@
                         <img src="/images/{project.image}" class="w-32 h-32 rounded-md" alt="{project.name} Logo" />
                         <div class="flex flex-col">
                             <div class="flex flex-col sm:flex-row items-center">
-                                <a href={project.link} target="_blank"><p class={`sm:pl-4 sm:pr-2 text-xl font-semibold ${project.link ? "underline text-blue-500" : ""}`}>{project.name}</p></a>
+                                <p class={`sm:pl-4 sm:pr-2 text-xl font-semibold`}>{project.name}</p>
                                 <div class="my-2 sm:my-0">
                                     {#each project.tags as tag}
                                         <Tag label={tag} />
@@ -61,11 +63,13 @@
                             <p class="pl-4 pt-2 pr-2 text-sm">{project.description}</p>
                         </div>
                     </div>
-                    {#if project.extra}
-                    <a href="{project.page ? project.page : ""}" class="dark:bg-slate-700 bg-slate-200 my-3 p-3 rounded-r flex flex-col justify-center hover:duration-100 hover:scale-110 ease-in-out">
+                    <a href="{project.page ? project.page : project.link}" class="text-slate-800 dark:text-slate-50 dark:bg-slate-700 bg-slate-200 my-3 p-3 rounded-r flex flex-col justify-center hover:duration-100 hover:scale-110 ease-in-out">
+                        {#if project.extra}
                         <ArrowRight />
+                        {:else}
+                        <ExternalLink />
+                        {/if}
                     </a>
-                    {/if}
                 </div>
             {/each}
         </div>
@@ -78,7 +82,7 @@
         <h1 class="dark:text-slate-50 text-4xl font-bold mt-4 mb-8">📷 Find me online!</h1>
         <div class="grid grid-cols-2 sm:flex sm:flex-row items-center justify-center">
             {#each socials as social}
-            <a href={social.url}>
+            <a href={social.url} target="_blank">
                 <Social social={social} />
             </a>
             {/each}
