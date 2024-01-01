@@ -4,6 +4,9 @@
     import Tag from "../../components/Tag.svelte";
     import Social from "../../components/Social.svelte";
     import ExternalLink from "../../svgs/ExternalLink.svelte";
+    import Filter from "../../svgs/Filter.svelte";
+    import Check from "../../svgs/Check.svelte";
+    import Cross from "../../svgs/Cross.svelte";
     import { projects } from "../../projects.json";
     import { socials } from "../../socials.json";
 
@@ -14,6 +17,26 @@
         const m = today.getMonth() - birthday.getMonth();
         if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) age--;
         return age;
+    }
+
+    let filtersShown = false;
+    function toggleFilters() { filtersShown = !filtersShown; }
+    
+    let filters = { "Discord": true, "JavaScript": true, "Node.js": true, "Kotlin": true, "Minecraft": true, "Paper": true, "Roblox": true, "Lua": true, "MongoDB": true, "MySQL": true, "SQLite": true };
+    let filteredProjects = projects.filter(project => {
+        for (const filter of Object.keys(filters)) {
+            if (filters[filter] && project.tags.includes(filter)) return true;
+        }
+        return false;
+    });
+    function toggleFilter(tag) { filters[tag] = !filters[tag]; filterProjects(); }
+    function filterProjects() {
+        filteredProjects = projects.filter(project => {
+            for (const filter of Object.keys(filters)) {
+                if (filters[filter] && project.tags.includes(filter)) return true;
+            }
+            return false;
+        });
     }
 </script>
 
@@ -45,9 +68,35 @@
 
     <!-- Projects -->
     <div id="projects">
-        <h1 class="dark:text-slate-50 text-4xl font-bold mt-4">📂 Projects I've worked on!</h1>
-        <div class="flex flex-col mt-6">
-            {#each projects as project}
+        <div class="flex flex-col sm:flex-row">
+            <h1 class="dark:text-slate-50 text-4xl font-bold grow">📂 Projects I've worked on!</h1>
+            <button on:click={toggleFilters} class="flex flex-row bg-slate-300 dark:bg-slate-700 rounded-full py-1 px-4 mt-4 sm:mt-0 mx-auto hover:bg-slate-400 dark:hover:bg-slate-800">
+                <p class="sm:hidden text-slate-500 dark:text-slate-400 text-lg self-center pr-2">Filters</p>
+                <Filter />
+            </button>
+        </div>
+
+        <!-- Project Filters -->
+        <div class={`${filtersShown ? "" : "hidden"} dark:bg-slate-800 bg-slate-200 mt-4 text-slate-600 dark:text-slate-400 rounded-md p-2`}>
+            {#each Object.keys(filters) as filter}
+                <button on:click={() => toggleFilter(filter)} class={`rounded-md px-2 py-1 my-1 text-sm mx-1 ${filters[filter] ? "text-slate-700 bg-slate-400 hover:bg-slate-500 dark:text-slate-800 dark:bg-slate-400 dark:hover:bg-slate-500" : "text-slate-600 bg-slate-300 hover:bg-slate-400 dark:text-slate-300 dark:bg-slate-700"}`}>
+                    <div class="flex flex-row">
+                        {#if filters[filter]}
+                            <Check />
+                        {:else}
+                            <Cross />
+                        {/if}
+                        <p class="self-center pl-1">{filter}</p>
+                    </div>
+                </button>
+            {/each}
+        </div>
+
+        <div class={`${filteredProjects.length === 0 ? "" : "hidden"} text-slate-500 dark:text-slate-400 text-center text-2xl my-6`}>
+            <p>Nothing to see here yet!</p>
+        </div>
+        <div class="flex flex-col mt-3">
+            {#each filteredProjects as project}
                 <div class="flex flex-row">
                     <div class="flex flex-col items-center sm:items-start sm:flex-row dark:bg-slate-800 bg-slate-300 rounded-l dark:text-slate-50 text-black my-3 p-2 mx-0">
                         <img src="/images/{project.image}" class="w-32 h-32 rounded-md" alt="{project.name} Logo" />
