@@ -13,6 +13,7 @@
         "MongoDB": "text-green-800 bg-green-400",
         "MySQL": "text-purple-800 bg-purple-500",
         "SQLite": "text-rose-800 bg-rose-400",
+        "Open Source": "text-slate-800 bg-slate-200 dark:bg-slate-300",
     }
 </script>
 

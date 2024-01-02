@@ -6,7 +6,7 @@
             "page": "/alex",
             "description": "A Discord bot to view information about the MCC event including results from past events, the current teams and stats from the Hall of Fame. Check out more information about Alex on its website!",
             "image": "alex.png",
-            "tags": [ "Discord", "JavaScript", "Node.js", "MongoDB" ],
+            "tags": [ "Discord", "JavaScript", "Node.js", "MongoDB", "Open Source" ],
             "extra": true
         },
         {
@@ -15,7 +15,7 @@
             "page": "/centurion",
             "description": "An RPG-style Discord bot for a community server, featuring custom built currency, inventory, shops, and items. This was developed for a community server owned by a friend and influencer.",
             "image": "Centurion.jpeg",
-            "tags": [ "Discord", "JavaScript", "Node.js", "MySQL" ],
+            "tags": [ "Discord", "JavaScript", "Node.js", "MySQL", "Open Source" ],
             "extra": true
         },
         {
@@ -33,7 +33,7 @@
             "page": "/pocket-games",
             "description": "A Minecraft plugin which adds several minigames to your server, including classics like Rock Paper Scissors and Tic Tac Toe as well as originals such as Fish Match! Features multiplayer modes as well as an in-built database to store player stats and leaderboards.",
             "image": "minecraft.png",
-            "tags": [ "Minecraft", "Kotlin", "Paper", "SQLite" ],
+            "tags": [ "Minecraft", "Kotlin", "Paper", "SQLite", "Open Source" ],
             "extra": true
         },
         {
@@ -49,7 +49,7 @@
             "link": "https://github.com/SirArchibald97/discord-bot-template-v14",
             "description": "A GitHub template to easily create a Discord bot quickly, built with Discord.js v14. It includes a custom built command handler and event listeners.",
             "image": "discord.webp",
-            "tags": [ "Discord", "JavaScript", "Node.js" ],
+            "tags": [ "Discord", "JavaScript", "Node.js", "Open Source" ],
             "extra": false
         }
     ]
