@@ -91,7 +91,7 @@
                         <div class="flex flex-col">
                             <div class="flex flex-col sm:flex-row items-center">
                                 <p class={`sm:pl-4 sm:pr-2 text-xl font-semibold`}>{project.name}</p>
-                                <div class="my-2 sm:my-0">
+                                <div class="my-2 sm:my-0 flex flex-wrap justify-center gap-y-2">
                                     {#each project.tags as tag}
                                         <Tag label={tag} />
                                     {/each}

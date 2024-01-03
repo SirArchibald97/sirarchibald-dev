@@ -5,17 +5,29 @@
     import Socials from "../../svgs/Socials.svelte";
     import Moon from "../../svgs/Moon.svelte";
     import Sun from "../../svgs/Sun.svelte";
+    import { onMount } from "svelte";
 
     let dark = true;
     function toggleTheme() { 
         dark = !dark; 
     }
+
+    let top = true;
+    onMount(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 0) {
+                top = false;
+            } else {
+                top = true;
+            }
+        });
+    });
 </script>
 
 <div class="{dark ? "dark" : ""}">
-    <div class="dark:bg-slate-900 bg-slate-50 duration-100">
+    <div class=" bg-slate-50 dark:bg-slate-900 duration-100">
         <main class="flex flex-col justify-center text-center sm:text-left w-full sm:max-w-4xl sm:mx-auto">
-            <nav class="grid grid-cols-2 gap-x-4 mx-4 sm:mx-0 sm:gap-x-0 sm:flex sm:flex-row items-center text-slate-50 text-md my-4 sm:my-8 sm:my-12 font-semibold">
+            <nav class={`sticky top-0 ${top ? "" : "py-4"} bg-slate-50 dark:bg-slate-900 duration-100 grid grid-cols-2 gap-x-4 mx-4 sm:mx-0 sm:gap-x-0 sm:flex sm:flex-row items-center text-slate-50 text-md my-4 sm:my-8 sm:my-12 font-semibold`}>
                 <a href="/#aboutme" class="flex flex-row items-center my-2 sm:my-0 sm:mx-2 px-4 py-1 dark:bg-slate-600 bg-slate-300 rounded-md dark:hover:bg-slate-700 hover:bg-slate-400 dark:text-slate-50 text-slate-800">
                     <Person />
                     <span class="pl-2">About Me</span>
