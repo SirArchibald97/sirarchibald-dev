@@ -2,12 +2,12 @@
     export let social;
 
     const colours = {
-        "GitHub": "dark:hover:from-green-950 dark:hover:to-green-600 hover:from-green-700 hover:to-green-400",
-        "Twitter": "dark:hover:from-sky-950 dark:hover:to-sky-600 hover:from-sky-700 hover:to-sky-400",
-        "YouTube": "dark:hover:from-red-950 dark:hover:to-red-600 hover:from-red-700 hover:to-red-400",
-        "Twitch": "dark:hover:from-violet-950 dark:hover:to-violet-600 hover:from-violet-700 hover:to-violet-400",
-        "Discord": "dark:hover:from-indigo-950 dark:hover:to-indigo-600 hover:from-indigo-700 hover:to-indigo-400",
-        "LinkedIn": "dark:hover:from-blue-950 dark:hover:to-blue-600 hover:from-blue-700 hover:to-blue-400",
+        "GitHub": "dark:hover:from-green-950 dark:hover:to-green-600 hover:from-green-600 hover:to-green-300",
+        "Twitter": "dark:hover:from-sky-950 dark:hover:to-sky-600 hover:from-sky-600 hover:to-sky-300",
+        "YouTube": "dark:hover:from-red-950 dark:hover:to-red-600 hover:from-red-600 hover:to-red-300",
+        "Twitch": "dark:hover:from-violet-950 dark:hover:to-violet-600 hover:from-violet-600 hover:to-violet-300",
+        "Discord": "dark:hover:from-indigo-950 dark:hover:to-indigo-600 hover:from-indigo-600 hover:to-indigo-300",
+        "LinkedIn": "dark:hover:from-blue-950 dark:hover:to-blue-600 hover:from-blue-600 hover:to-blue-300",
     }
 </script>
 

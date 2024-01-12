@@ -47,10 +47,23 @@
         {
             "name": "Discord Bot Template",
             "link": "https://github.com/SirArchibald97/discord-bot-template-v14",
-            "description": "A GitHub template to easily create a Discord bot quickly, built with Discord.js v14. It includes a custom built command handler and event listeners.",
+            "description": "A GitHub template to easily create a Discord bot quickly, built in JavaScript & Node.js with Discord.js v14. It includes a custom built slash command handler, event listeners, and support for environment variables.",
             "image": "discord.webp",
             "tags": [ "Discord", "JavaScript", "Node.js", "Open Source" ],
             "extra": false
+        }
+    ],
+
+    "experience": [
+        {
+            "name": "MCC Game Tester",
+            "image": "mcc.png",
+            "description": "I help to test the Minecraft Championship event and the MCC Island Minecraft server, providing feedback and bug reports to the developers."
+        },
+        {
+            "name": "MCC Moderator",
+            "image": "mod.webp",
+            "description": "I am a volunteer moderator for MCC Island, a public Minecraft server based on the Minecraft Championship event. I help keep the server & Discord community a fun and friendly place!"
         }
     ]
 }

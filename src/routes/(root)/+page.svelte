@@ -1,11 +1,13 @@
 <script>
-    import ArrowRight from "../../svgs/ArrowRight.svelte";
+    import DoubleArrowRight from "../../svgs/DoubleArrowRight.svelte";
     import Link from "../../components/Link.svelte";
     import Tag from "../../components/Tag.svelte";
     import Social from "../../components/Social.svelte";
     import ExternalLink from "../../svgs/ExternalLink.svelte";
     import Filter from "../../svgs/Filter.svelte";
-    import { projects } from "../../projects.json";
+    import ArrowLeft from "../../svgs/ArrowLeft.svelte";
+    import ArrowRight from "../../svgs/ArrowRight.svelte";
+    import { projects, experience } from "../../projects.json";
     import { socials } from "../../socials.json";
 
     function age() {
@@ -36,6 +38,18 @@
             return false;
         });
     }
+
+    let currentExperience = 0;
+    function moveCarousel(forwards) {
+        if (!forwards) {
+            if (currentExperience === 0) currentExperience = experience.length - 1;
+            else currentExperience--;
+        } else {
+            if (currentExperience === experience.length - 1) currentExperience = 0;
+            else currentExperience++;
+        }
+    }
+
 </script>
 
 <head>
@@ -54,12 +68,21 @@
         </p>
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4">
             I have 8 years experience with programming and mostly develop for Minecraft and the web, which I plan to continue into a career. I'm currently studying an undergraduate degree in software engineering, where I am 
-            in my third and final year.
+            in my third and final year. In my spare time, I enjoy playing video games, reading fantasy novels and swimming!
         </p>
-        <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4">
-            In my spare time, I enjoy playing video games, reading fantasy novels and swimming! I am also a moderator for <Link href="https://mccisland.net" text="MCC Island" />, a 
-            Minecraft server created by Noxcrew.
-        </p>
+
+        <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4">Some other things I've been a part of include...</p>
+        <div class="pt-4 flex flex-row justify-center">
+            <button on:click={() => moveCarousel(false)} class="text-slate-800 dark:text-slate-50 bg-slate-300 dark:bg-slate-700 rounded-l hover:scale-105 duration-100 ease-in-out px-1"><ArrowLeft /></button>
+            <div class="bg-slate-200 dark:bg-slate-800 p-2 flex flex-col sm:flex-row px-4 py-3">
+                <img src={`/images/${experience[currentExperience].image}`} alt={experience[currentExperience].name} class="w-24 h-24 rounded-md mx-auto pb-2 sm:pb-0" />
+                <div class="flex flex-col ml-3 text-slate-800 dark:text-slate-50">
+                    <p class="font-semibold">{experience[currentExperience].name}</p>
+                    <p class="font-light">{experience[currentExperience].description}</p>
+                </div>
+            </div>
+            <button on:click={() => moveCarousel(true)} class="text-slate-800 dark:text-slate-50 bg-slate-300 dark:bg-slate-700 rounded-r hover:scale-105 duration-100 ease-in-out px-1"><ArrowRight /></button>
+        </div>
     </div>
 
     <hr class="mt-8 mb-6" />
@@ -68,16 +91,16 @@
     <div id="projects">
         <div class="flex flex-col sm:flex-row">
             <h1 class="dark:text-slate-50 text-4xl font-bold grow">📂 Projects I've worked on!</h1>
-            <button on:click={toggleFilters} class="flex flex-row bg-slate-300 dark:bg-slate-700 rounded-full py-1 px-4 mt-4 sm:mt-0 mx-auto hover:bg-slate-400 dark:hover:bg-slate-800">
+            <button on:click={toggleFilters} class="flex flex-row bg-slate-300 dark:bg-slate-700 rounded-full py-1 px-4 mt-4 sm:mt-0 mx-auto hover:bg-slate-400 dark:hover:bg-slate-800 duration-100">
                 <p class="sm:hidden text-slate-500 dark:text-slate-400 text-lg self-center pr-2">Filters</p>
                 <Filter />
             </button>
         </div>
 
         <!-- Project Filters -->
-        <div class={`${filtersShown ? "" : "hidden"} dark:bg-slate-800 bg-slate-200 mt-4 text-slate-600 dark:text-slate-400 rounded-md p-2`}>
+        <div id="filters" class={`${filtersShown ? "" : "hidden"} dark:bg-slate-800 bg-slate-200 mt-4 text-slate-600 dark:text-slate-400 rounded-md p-2`}>
             {#each Object.keys(filters) as filter}
-                <button on:click={() => toggleFilter(filter)} class={`rounded-md px-2 py-1 my-1 text-sm mx-1 ${filters[filter] ? "text-slate-700 bg-slate-400 hover:bg-slate-500 dark:text-slate-800 dark:bg-slate-400 dark:hover:bg-slate-500" : "text-slate-600 bg-slate-300 hover:bg-slate-400 dark:text-slate-300 dark:bg-slate-700"}`}>
+                <button on:click={() => toggleFilter(filter)} class={`rounded-md px-2 py-1 my-1 text-sm mx-1 ${filters[filter] ? "text-slate-700 bg-slate-400 hover:bg-slate-500 dark:text-slate-800 dark:bg-slate-400 dark:hover:bg-slate-500" : "text-slate-600 bg-slate-300 hover:bg-slate-400 dark:text-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700"}`}>
                     {filter}
                 </button>
             {/each}
@@ -100,9 +123,9 @@
                             <p class="pl-4 pt-2 pr-2 text-sm">{project.description}</p>
                         </div>
                     </div>
-                    <a href="{project.page ? project.page : project.link}" class="text-slate-800 dark:text-slate-50 dark:bg-slate-700 bg-slate-200 my-3 p-3 rounded-r flex flex-col justify-center hover:duration-100 hover:scale-110 ease-in-out">
+                    <a href="{project.page ? project.page : project.link}" class="text-slate-800 dark:text-slate-50 dark:bg-slate-700 bg-slate-200 my-3 p-3 rounded-r flex flex-col justify-center hover:scale-110 duration-100 ease-in-out">
                         {#if project.extra}
-                        <ArrowRight />
+                        <DoubleArrowRight />
                         {:else}
                         <ExternalLink />
                         {/if}
