@@ -1,6 +1,15 @@
 {
     "projects": [
         {
+            "name": "MCC Island Stats",
+            "link": "https://stats.sirarchibald.dev",
+            "page": "/islandstats",
+            "description": "A website to view player stats from the MCC Island Minecraft server, including player information, game stats, badges, friends, status and more!",
+            "image": "islandstats.png",
+            "tags": ["JavaScript", "Node.js", "Svelte", "MongoDB", "Open Source" ],
+            "extra": false
+        },
+        {
             "name": "Alex",
             "link": "https://alex.sirarchibald.dev",
             "page": "/alex",
@@ -58,12 +67,12 @@
         {
             "name": "MCC Game Tester",
             "image": "mcc.png",
-            "description": "I help to test the Minecraft Championship event and the MCC Island Minecraft server, providing feedback and bug reports to the developers."
+            "description": "I help to play test the MCC event and the MCC Island Minecraft server, providing feedback and bugs to the developers!"
         },
         {
             "name": "MCC Moderator",
             "image": "mod.webp",
-            "description": "I am a volunteer moderator for MCC Island, a public Minecraft server based on the Minecraft Championship event. I help keep the server & Discord community a fun and friendly place!"
+            "description": "I am a volunteer moderator for the MCC Island Minecraft server, helping to keep the community safe and fun!"
         }
     ]
 }
