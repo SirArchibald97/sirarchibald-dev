@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+    background-color: #489473;
+}
+
 html {
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth;    
 }
 
 hr {
