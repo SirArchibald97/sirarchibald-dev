@@ -1,10 +1,18 @@
 {
     "projects": [
         {
-            "name": "Alex",
-            "link": "https://alex.sirarchibald.dev",
-            "page": "/alex",
-            "description": "A Discord bot to view information about the MCC event including results from past events, the current teams and stats from the Hall of Fame. Check out more information about Alex on its website!",
+            "name": "Lighthouse",
+            "link": "https://stats.sirarchibald.dev",
+            "description": "A website to lookup player statistics for the MCC Island Minecraft network. See your game stats, badges, currency, socials, online status and more! Currently under development with new features being added all the time!",
+            "image": "alex.png",
+            "tags": [ "Svelte", "JavaScript", "Node.js", "MongoDB", "Open Source" ],
+            "extra": false
+        },
+        {
+            "name": "Lighthouse Bot",
+            "link": "https://stats.sirarchibald.dev",
+            "page": "/lighthouse",
+            "description": "A Discord bot to view information about the MCC event including results from past events, the current teams and stats from the Hall of Fame. Invite the bot to your server from the website!",
             "image": "alex.png",
             "tags": [ "Discord", "JavaScript", "Node.js", "MongoDB", "Open Source" ],
             "extra": true
@@ -58,12 +66,12 @@
         {
             "name": "MCC Game Tester",
             "image": "mcc.png",
-            "description": "I help to test the Minecraft Championship event and the MCC Island Minecraft server, providing feedback and bug reports to the developers."
+            "description": "I help to test the MC Championship event and the MCC Island Minecraft server, providing feedback and bug reports to the developers."
         },
         {
             "name": "MCC Moderator",
             "image": "mod.webp",
-            "description": "I am a volunteer moderator for MCC Island, a public Minecraft server based on the Minecraft Championship event. I help keep the server & Discord community a fun and friendly place!"
+            "description": "I am a volunteer moderator for MCC Island, a public Minecraft server based on the MC Championship event. I help keep the server & Discord community a fun and friendly place!"
         }
     ]
 }

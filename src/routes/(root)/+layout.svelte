@@ -53,7 +53,7 @@
             <slot />
 
             <footer class="my-6 flex flex-row justify-between mx-12 sm:mx-12">
-                <p class="text-slate-500">© 2023 SirArchibald</p>
+                <p class="text-slate-500">© 2024 SirArchibald</p>
                 <p class="text-slate-500">Code on <a href="https://github.com/sirarchibald97/portfolio-2023" target="_blank" class="text-blue-500 underline">[GitHub]</a></p>
             </footer>
         </main>

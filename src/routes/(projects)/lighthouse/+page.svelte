@@ -6,21 +6,21 @@
     import ChevronRight from "../../../svgs/ChevronRight.svelte";
     import ChevronDown from "../../../svgs/ChevronDown.svelte";
     import { projects } from "../../../projects.json";
-    const project = projects[0];
+    const project = projects[1];
 
     let screenshotCollapsed = true;
     function toggleScreenshot() { screenshotCollapsed = !screenshotCollapsed; }
 </script>
 
 <head>
-    <title>Alex | SirArchibald.dev</title>
+    <title>Lighthouse Bot | SirArchibald.dev</title>
     <script src="https://kit.fontawesome.com/d576307fab.js" crossorigin="anonymous"></script>
     <meta name="description" content="Alex is a stats and utilities Discord bot for MCC and MCC Island, built with Node.js and Discord.js. It started out as a project to view MCC event information and statistics, but I plan to grow the project to include more features in the future.">
-    <meta name="keywords" content="SirArchibald, Alex, Discord, Discord bot, Discord.js, Node.js, MCC Island, MCC">
+    <meta name="keywords" content="SirArchibald, Lighthouse, Stats, Player Stats, Discord, Discord bot, Discord.js, Node.js, MCC Island, MCC, MCCI">
 </head>
 
 <div>
-    <h1 class="dark:text-slate-50 text-4xl font-bold mb-4 text-center sm:text-left">🤖 Alex</h1>
+    <h1 class="dark:text-slate-50 text-4xl font-bold mb-4 text-center sm:text-left">🤖 Lighthouse</h1>
     <div class="flex flex-col sm:flex-row">
         <div>
             {#each project.tags as tag}
@@ -28,27 +28,31 @@
             {/each}
         </div>
         <div>
-            <a href="https://alex.sirarchibald.dev"><i class="fa-solid fa-globe dark:text-slate-50 text-slate-700 fa-2xl mt-8 sm:mt-3.5 ml-2 hover:text-blue-400 dark:hover:text-blue-400"></i></a>
-            <a href="https://github.com/sirarchibald97/alex"><i class="fa-brands fa-github dark:text-slate-50 text-slate-700 fa-2xl mt-8 sm:mt-3.5 ml-2 hover:text-blue-400 dark:hover:text-blue-400"></i></a>
+            <a href="https://stats.sirarchibald.dev"><i class="fa-solid fa-globe dark:text-slate-50 text-slate-700 fa-2xl mt-8 sm:mt-3.5 ml-2 hover:text-blue-400 dark:hover:text-blue-400"></i></a>
+            <a href="https://github.com/sirarchibald97/LighthouseBot"><i class="fa-brands fa-github dark:text-slate-50 text-slate-700 fa-2xl mt-8 sm:mt-3.5 ml-2 hover:text-blue-400 dark:hover:text-blue-400"></i></a>
         </div>
     </div>
 
     <!-- ABOUT -->
-    <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4 text-center sm:text-left">
-        Alex is a stats and utilities Discord bot for MCC and MCC Island, built with Node.js and Discord.js. It started out 
+    <br />
+    <p class="dark:text-slate-50 text-lg sm:pl-4 text-center sm:text-left">
+        Lighthouse is a stats and utilities Discord bot for MCC and MCC Island, built with Node.js and Discord.js. It started out 
         as a project to view MCC event information and statistics, but I plan to grow the project to include more features
         in the future.
     </p>
-    <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4 text-center sm:text-left">
-        Currently Alex features commands to grab information from the MCC Event API, including teams, scores and world 
+    <br />
+    <p class="dark:text-slate-50 text-lg sm:pl-4 text-center sm:text-left">
+        Currently Lighthouse features commands to grab information from the MCC Event API, including teams, scores and world 
         records. It can also show all the hidden badges available on MCC Island, as well as how to get them, and contains 
         a lookup feature for finding how and where to craft cosmetics that you may be missing.
     </p>
+    <br />
     <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4 text-center sm:text-left">
-        Alex also has a web-based dashboard where you can invite the bot to your server and customise certain settings.
-        You can check out the website at <Link href="https://alex.sirarchibald.dev" text="alex.sirarchibald.dev"/>.
+        Eventually the Lighthouse bot will have a web-based dashboard where you can invite the bot to your server and customise certain settings.
+        This dashboard will be integrated into the existing website at <Link href="https://stats.sirarchibald.dev" text="stats.sirarchibald.dev" />.
         <br />
-        The codebase for Alex, as well as the web dashboard, is open source and available on GitHub at <Link href="https://github.com/sirarchibald97/alex" text="github.com/sirarchibald97/alex" />
+        <br />
+        The codebase for Lighthouse, as well as the web dashboard, is open source and available on GitHub at <Link href="https://github.com/sirarchibald97/alex" text="github.com/sirarchibald97/alex" />
         and <Link href="https://github.com/sirarchibald97/alex-web" text="github.com/sirarchibald97/alex-web" /> respectively.
     </p>
 

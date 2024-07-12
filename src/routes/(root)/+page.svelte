@@ -125,9 +125,9 @@
                     </div>
                     <a href="{project.page ? project.page : project.link}" class="text-slate-800 dark:text-slate-50 dark:bg-slate-700 bg-slate-200 my-3 p-3 rounded-r flex flex-col justify-center hover:scale-110 duration-100 ease-in-out">
                         {#if project.extra}
-                        <DoubleArrowRight />
+                            <DoubleArrowRight />
                         {:else}
-                        <ExternalLink />
+                            <ExternalLink />
                         {/if}
                     </a>
                 </div>

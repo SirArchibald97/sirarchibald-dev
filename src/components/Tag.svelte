@@ -5,6 +5,7 @@
         "Discord": "text-indigo-800 bg-indigo-500",
         "JavaScript": "text-yellow-700 bg-yellow-300",
         "Node.js": "text-lime-700 bg-lime-300",
+        "Svelte": "text-orange-900 bg-orange-400",
         "Kotlin": "text-pink-700 bg-pink-400",
         "Minecraft": "text-green-800 bg-green-400",
         "Paper": "text-orange-800 bg-orange-400",
