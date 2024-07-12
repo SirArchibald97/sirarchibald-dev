@@ -5,8 +5,6 @@
     import Social from "../../components/Social.svelte";
     import ExternalLink from "../../svgs/ExternalLink.svelte";
     import Filter from "../../svgs/Filter.svelte";
-    import ArrowLeft from "../../svgs/ArrowLeft.svelte";
-    import ArrowRight from "../../svgs/ArrowRight.svelte";
     import { projects, experience } from "../../projects.json";
     import { socials } from "../../socials.json";
 
@@ -22,7 +20,7 @@
     let filtersShown = false;
     function toggleFilters() { filtersShown = !filtersShown; }
     
-    let filters = { "Discord": false, "JavaScript": false, "Node.js": false, "Kotlin": false, "Minecraft": false, "Paper": false, "Roblox": false, "Lua": false, "MongoDB": false, "MySQL": false, "SQLite": false, "Open Source": false };
+    let filters = { "Discord": false, "JavaScript": false, "Svelte": false, "Node.js": false, "Kotlin": false, "Minecraft": false, "Paper": false, "Roblox": false, "Lua": false, "MongoDB": false, "MySQL": false, "SQLite": false, "Open Source": false };
     let filteredProjects = projects.filter(project => {
         for (const filter of Object.keys(filters)) {
             if (filters[filter] && project.tags.includes(filter)) return true;
@@ -38,18 +36,6 @@
             return false;
         });
     }
-
-    let currentExperience = 0;
-    function moveCarousel(forwards) {
-        if (!forwards) {
-            if (currentExperience === 0) currentExperience = experience.length - 1;
-            else currentExperience--;
-        } else {
-            if (currentExperience === experience.length - 1) currentExperience = 0;
-            else currentExperience++;
-        }
-    }
-
 </script>
 
 <head>
@@ -64,7 +50,7 @@
         <h1 class="dark:text-slate-50 text-4xl font-bold mb-4 text-center sm:text-left">👋 Hi, I'm Archie!</h1>
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4 text-center sm:text-left">
             I'm a {age()} year old developer and designer from the UK, and I go by SirArchibald online. I am passionate about design and development and 
-            I created this website to showcase some of my own work, teams I have been a part of, as well as other info about me!
+            I created this website to showcase some of my own work, teams I have been a part of, and other info about me!
         </p>
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4">
             I have 8 years experience with programming and mostly develop for Minecraft and the web, which I plan to continue into a career. I'm currently studying an undergraduate degree in software engineering, where I am 
@@ -72,16 +58,16 @@
         </p>
 
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4">Some other things I've been a part of include...</p>
-        <div class="pt-4 flex flex-row justify-center">
-            <button on:click={() => moveCarousel(false)} class="text-slate-800 dark:text-slate-50 bg-slate-300 dark:bg-slate-700 rounded-l hover:scale-105 duration-100 ease-in-out px-1"><ArrowLeft /></button>
-            <div class="bg-slate-200 dark:bg-slate-800 p-2 flex flex-col sm:flex-row px-4 py-3">
-                <img src={`/images/${experience[currentExperience].image}`} alt={experience[currentExperience].name} class="w-24 h-24 rounded-md mx-auto pb-2 sm:pb-0" />
-                <div class="flex flex-col ml-3 text-slate-800 dark:text-slate-50">
-                    <p class="font-semibold">{experience[currentExperience].name}</p>
-                    <p class="font-light">{experience[currentExperience].description}</p>
+        <div class="pt-6 grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center">
+            {#each experience as exp}
+                <div class="bg-slate-200 dark:bg-slate-800 p-2 flex flex-row px-4 py-3 rounded-md hover:scale-105 duration-100">
+                    <img src={`/images/${exp.image}`} alt={exp.name} class="w-24 h-24 self-center sm:self-start rounded-md mx-auto pb-2 sm:pb-0" />
+                    <div class="flex flex-col ml-3 text-slate-800 dark:text-slate-50">
+                        <p class="font-semibold">{exp.name}</p>
+                        <p class="font-light">{exp.description}</p>
+                    </div>
                 </div>
-            </div>
-            <button on:click={() => moveCarousel(true)} class="text-slate-800 dark:text-slate-50 bg-slate-300 dark:bg-slate-700 rounded-r hover:scale-105 duration-100 ease-in-out px-1"><ArrowRight /></button>
+            {/each}
         </div>
     </div>
 
@@ -113,14 +99,14 @@
                         <img src="/images/{project.image}" class="w-32 h-32 rounded-md" alt="{project.name} Logo" />
                         <div class="flex flex-col">
                             <div class="flex flex-col sm:flex-row items-center">
-                                <p class={`sm:pl-4 sm:pr-2 text-xl font-semibold`}>{project.name}</p>
+                                <p class={`sm:pl-4 sm:pr-2 text-2xl font-semibold`}>{project.name}</p>
                                 <div class="my-2 sm:my-0 flex flex-wrap justify-center gap-y-2">
                                     {#each project.tags as tag}
                                         <Tag label={tag} />
                                     {/each}
                                 </div>
                             </div>
-                            <p class="pl-4 pt-2 pr-2 text-sm">{project.description}</p>
+                            <p class="pl-4 pt-3 pr-2 text-md">{project.description}</p>
                         </div>
                     </div>
                     <a href="{project.page ? project.page : project.link}" class="text-slate-800 dark:text-slate-50 dark:bg-slate-700 bg-slate-200 my-3 p-3 rounded-r flex flex-col justify-center hover:scale-110 duration-100 ease-in-out">
