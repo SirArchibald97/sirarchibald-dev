@@ -1,12 +1,11 @@
 <script>
-    import DoubleArrowRight from "../../svgs/DoubleArrowRight.svelte";
-    import Link from "../../components/Link.svelte";
-    import Tag from "../../components/Tag.svelte";
-    import Social from "../../components/Social.svelte";
-    import ExternalLink from "../../svgs/ExternalLink.svelte";
-    import Filter from "../../svgs/Filter.svelte";
-    import { projects, experience } from "../../projects.json";
-    import { socials } from "../../socials.json";
+    import DoubleArrowRight from "$lib/svgs/DoubleArrowRight.svelte";
+    import Tag from "$lib/components/Tag.svelte";
+    import Social from "$lib/components/Social.svelte";
+    import ExternalLink from "$lib/svgs/ExternalLink.svelte";
+    import Filter from "$lib/svgs/Filter.svelte";
+    import { projects, experience } from "$lib/projects.json";
+    import { socials } from "$lib/socials.json";
 
     function age() {
         const birthday = new Date(2003, 6, 23);
@@ -20,7 +19,7 @@
     let filtersShown = false;
     function toggleFilters() { filtersShown = !filtersShown; }
     
-    let filters = { "Discord": false, "JavaScript": false, "Svelte": false, "Node.js": false, "Kotlin": false, "Minecraft": false, "Paper": false, "Roblox": false, "Lua": false, "MongoDB": false, "MySQL": false, "SQLite": false, "Open Source": false };
+    let filters = { "Discord": false, "JavaScript": false, "Svelte": false, "Node.js": false, "Kotlin": false, "Minecraft": false, "Paper": false, "Roblox": false, "Lua": false, "MongoDB": false, "MySQL": false, "SQLite": false, "Open Source": false, "Game Design": false };
     let filteredProjects = projects.filter(project => {
         for (const filter of Object.keys(filters)) {
             if (filters[filter] && project.tags.includes(filter)) return true;
@@ -58,16 +57,18 @@
         </p>
 
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4">Some other things I've been a part of include...</p>
-        <div class="pt-6 grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center">
-            {#each experience as exp}
-                <div class="bg-slate-200 dark:bg-slate-800 p-2 flex flex-row px-4 py-3 rounded-md hover:scale-105 duration-100">
-                    <img src={`/images/${exp.image}`} alt={exp.name} class="w-24 h-24 self-center sm:self-start rounded-md mx-auto pb-2 sm:pb-0" />
-                    <div class="flex flex-col ml-3 text-slate-800 dark:text-slate-50">
-                        <p class="font-semibold">{exp.name}</p>
-                        <p class="font-light">{exp.description}</p>
+        <div class="w-5/6 mt-6 flex flex-row justify-center">
+            <div class="flex flex-col gap-y-4">
+                {#each experience as exp}
+                    <div class="bg-slate-200 dark:bg-slate-800 p-2 flex flex-row px-4 py-3 rounded-md hover:scale-105 duration-100">
+                        <img src={`/images/${exp.image}`} alt={exp.name} class="w-24 h-24 self-center sm:self-start rounded-md mx-auto pb-2 sm:pb-0" />
+                        <div class="flex flex-col ml-3 text-slate-800 dark:text-slate-50">
+                            <p class="font-semibold">{exp.name}</p>
+                            <p class="font-light">{exp.description}</p>
+                        </div>
                     </div>
-                </div>
-            {/each}
+                {/each}
+            </div>
         </div>
     </div>
 

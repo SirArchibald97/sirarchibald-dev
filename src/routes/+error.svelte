@@ -1,8 +1,8 @@
 <script>
     import "../app.css";
-    import Sun from "../svgs/Sun.svelte";
-    import Moon from "../svgs/Moon.svelte";
-    import Home from "../svgs/Home.svelte";
+    import Sun from "$lib/svgs/Sun.svelte";
+    import Moon from "$lib/svgs/Moon.svelte";
+    import Home from "$lib/svgs/Home.svelte";
 
     let dark = true;
     function toggleTheme() { dark = !dark; }

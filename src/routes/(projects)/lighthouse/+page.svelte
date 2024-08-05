@@ -1,11 +1,11 @@
 <script>
-    import Link from "../../../components/Link.svelte";
-    import Tag from "../../../components/Tag.svelte";
-    import Bullets from "../../../components/Bullets.svelte";
-    import Image from "../../../components/Image.svelte";
-    import ChevronRight from "../../../svgs/ChevronRight.svelte";
-    import ChevronDown from "../../../svgs/ChevronDown.svelte";
-    import { projects } from "../../../projects.json";
+    import Link from "$lib/components/Link.svelte";
+    import Tag from "$lib/components/Tag.svelte";
+    import Bullets from "$lib/components/Bullets.svelte";
+    import Image from "$lib/components/Image.svelte";
+    import ChevronRight from "$lib/svgs/ChevronRight.svelte";
+    import ChevronDown from "$lib/svgs/ChevronDown.svelte";
+    import { projects } from "$lib/projects.json";
     const project = projects[1];
 
     let screenshotCollapsed = true;
