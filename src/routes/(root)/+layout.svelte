@@ -1,10 +1,10 @@
 <script>
     import "../../app.css";
-    import Person from "../../svgs/Person.svelte";
-    import Projects from "../../svgs/Projects.svelte";
-    import Socials from "../../svgs/Socials.svelte";
-    import Moon from "../../svgs/Moon.svelte";
-    import Sun from "../../svgs/Sun.svelte";
+    import Person from "$lib/svgs/Person.svelte";
+    import Projects from "$lib/svgs/Projects.svelte";
+    import Socials from "$lib/svgs/Socials.svelte";
+    import Moon from "$lib/svgs/Moon.svelte";
+    import Sun from "$lib/svgs/Sun.svelte";
     import { onMount } from "svelte";
 
     let dark = true;

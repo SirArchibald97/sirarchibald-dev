@@ -27,6 +27,15 @@
             "extra": true
         },
         {
+            "name": "Hypixel Housing",
+            "link": "",
+            "page": "/hypixel",
+            "description": "A group of Hypixel housings built by myself and a friend, featuring a variety of games and themes. We built these housings using Hypixel's custom housing tools and our knowledge of game design concepts.",
+            "image": "hypixel.png",
+            "tags": ["Game Design", "Minecraft"],
+            "extra": true
+        },
+        {
             "name": "Pushback",
             "link": null,
             "page": "/pushback",
