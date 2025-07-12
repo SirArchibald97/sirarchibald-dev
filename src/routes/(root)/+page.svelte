@@ -7,15 +7,6 @@
     import { projects, experience } from "$lib/projects.json";
     import { socials } from "$lib/socials.json";
 
-    function age() {
-        const birthday = new Date(2003, 6, 23);
-        const today = new Date();
-        let age = today.getFullYear() - birthday.getFullYear();
-        const m = today.getMonth() - birthday.getMonth();
-        if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) age--;
-        return age;
-    }
-
     let filtersShown = false;
     function toggleFilters() { filtersShown = !filtersShown; }
     
@@ -48,27 +39,21 @@
     <div id="aboutme">
         <h1 class="dark:text-slate-50 text-4xl font-bold mb-4 text-center sm:text-left">👋 Hi, I'm Archie!</h1>
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4 text-center sm:text-left">
-            I'm a {age()} year old developer and designer from the UK, and I go by SirArchibald online. I am passionate about design and development and 
+            I'm a 22 year old developer and designer from the UK, and I go by SirArchibald online. I am passionate about design and development and 
             I created this website to showcase some of my own work, teams I have been a part of, and other info about me!
         </p>
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4">
-            I have 8 years experience with programming and mostly develop for Minecraft and the web, which I plan to continue into a career. I'm currently studying an undergraduate degree in software engineering, where I am 
-            in my third and final year. In my spare time, I enjoy playing video games, reading fantasy novels and swimming!
+            I have 8 years experience with programming and mostly develop for Minecraft, Roblox and the web, which I plan to continue into a career. I have a BSc in software engineering and I'm currently studying a Masters degree in game design. In my spare time, I enjoy programming, playing video games, reading and writing fantasy novels and swimming!
         </p>
 
         <p class="dark:text-slate-50 text-lg pt-4 sm:pl-4">Some other things I've been a part of include...</p>
-        <div class="w-5/6 mt-6 flex flex-row justify-center">
-            <div class="flex flex-col gap-y-4">
-                {#each experience as exp}
-                    <div class="bg-slate-200 dark:bg-slate-800 p-2 flex flex-row px-4 py-3 rounded-md hover:scale-105 duration-100">
-                        <img src={`/images/${exp.image}`} alt={exp.name} class="w-24 h-24 self-center sm:self-start rounded-md mx-auto pb-2 sm:pb-0" />
-                        <div class="flex flex-col ml-3 text-slate-800 dark:text-slate-50">
-                            <p class="font-semibold">{exp.name}</p>
-                            <p class="font-light">{exp.description}</p>
-                        </div>
-                    </div>
-                {/each}
-            </div>
+        <div class="w-5/6 grid grid-cols-3 gap-4 mt-4">
+            {#each experience as exp}
+                <div class="bg-slate-200 dark:bg-slate-800 text-neutral-900 dark:text-neutral-100 p-4 flex flex-col gap-y-2 rounded-md hover:scale-105 duration-100">
+                    <img src={`/images/${exp.image}`} alt={exp.name} class="w-16 h-16 self-center sm:self-start rounded-full mx-auto pb-2 sm:pb-0" />
+                    <p class="text-lg text-center font-semibold">{exp.name}</p>
+                </div>
+            {/each}
         </div>
     </div>
 
@@ -97,7 +82,7 @@
             {#each (filteredProjects.length === 0 ? projects : filteredProjects) as project}
                 <div class="flex flex-row">
                     <div class="flex flex-col items-center sm:items-start sm:flex-row dark:bg-slate-800 bg-slate-300 rounded-l dark:text-slate-50 text-black my-3 p-2 mx-0">
-                        <img src="/images/{project.image}" class="w-32 h-32 rounded-md" alt="{project.name} Logo" />
+                        <img src={project.image.startsWith("http") ? project.image : `/images/${project.image}`} class="w-32 h-32 rounded-md" alt="{project.name} Logo" />
                         <div class="flex flex-col">
                             <div class="flex flex-col sm:flex-row items-center">
                                 <p class={`sm:pl-4 sm:pr-2 text-2xl font-semibold`}>{project.name}</p>
@@ -110,7 +95,7 @@
                             <p class="pl-4 pt-3 pr-2 text-md">{project.description}</p>
                         </div>
                     </div>
-                    <a href="{project.page ? project.page : project.link}" class="text-slate-800 dark:text-slate-50 dark:bg-slate-700 bg-slate-200 my-3 p-3 rounded-r flex flex-col justify-center hover:scale-110 duration-100 ease-in-out">
+                    <a href="{project.page ? project.page : project.link}" target={project.page ? "" : "_blank"} class="text-slate-800 dark:text-slate-50 dark:bg-slate-700 bg-slate-200 my-3 p-3 rounded-r flex flex-col justify-center hover:scale-110 duration-100 ease-in-out">
                         {#if project.extra}
                             <DoubleArrowRight />
                         {:else}

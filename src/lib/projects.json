@@ -2,20 +2,19 @@
     "projects": [
         {
             "name": "Lighthouse",
-            "link": "https://stats.sirarchibald.dev",
+            "link": "https://www.lighthouse.gay",
             "description": "A website to lookup player statistics for the MCC Island Minecraft network. See your game stats, badges, currency, socials, online status and more! Currently under development with new features being added all the time!",
-            "image": "alex.png",
+            "image": "https://cdn.islandstats.xyz/emojis/crown.png",
             "tags": [ "Svelte", "JavaScript", "Node.js", "MongoDB", "Open Source" ],
             "extra": false
         },
         {
-            "name": "Lighthouse Bot",
-            "link": "https://stats.sirarchibald.dev",
-            "page": "/lighthouse",
-            "description": "A Discord bot to view information about the MCC event including results from past events, the current teams and stats from the Hall of Fame. Invite the bot to your server from the website!",
-            "image": "alex.png",
-            "tags": [ "Discord", "JavaScript", "Node.js", "MongoDB", "Open Source" ],
-            "extra": true
+            "name": "Trident",
+            "link": "https://modrinth.com/project/trident-mcci",
+            "description": "A client-side Minecraft mod providing huge variety of utility and quality of life features for MCC Island. Under development, coming soon!",
+            "image": "trident.png",
+            "tags": [ "Minecraft", "Kotlin", "Open Source" ],
+            "extra": false
         },
         {
             "name": "Centurion",
@@ -27,30 +26,12 @@
             "extra": true
         },
         {
-            "name": "Hypixel Housing",
-            "link": "",
-            "page": "/hypixel",
-            "description": "A group of Hypixel housings built by myself and a friend, featuring a variety of games and themes. We built these housings using Hypixel's custom housing tools and our knowledge of game design concepts.",
-            "image": "hypixel.png",
-            "tags": ["Game Design", "Minecraft"],
-            "extra": true
-        },
-        {
-            "name": "Pushback",
+            "name": "MontGo Studios",
             "link": null,
-            "page": "/pushback",
-            "description": "A Roblox duelling game, built by myself and a business partner, in which players battle to push each other off an arena. It features custom built maps, weapon skins, shops and crates and leaderboards.",
+            "page": "/eyespy",
+            "description": "A Roblox game studio, built by myself and a business partner. We are developing several game ideas currently as part of a Masters degree in game design and aim to release them soon.",
             "image": "montogo.png",
             "tags": [ "Roblox", "Lua" ],
-            "extra": true
-        },
-        {
-            "name": "PocketGames",
-            "link": "https://github.com/SirArchibald97/pocket-games",
-            "page": "/pocket-games",
-            "description": "A Minecraft plugin which adds several minigames to your server, including classics like Rock Paper Scissors and Tic Tac Toe as well as originals such as Fish Match! Features multiplayer modes as well as an in-built database to store player stats and leaderboards.",
-            "image": "minecraft.png",
-            "tags": [ "Minecraft", "Kotlin", "Paper", "SQLite", "Open Source" ],
             "extra": true
         },
         {
@@ -68,19 +49,30 @@
             "image": "discord.webp",
             "tags": [ "Discord", "JavaScript", "Node.js", "Open Source" ],
             "extra": false
+        },
+                {
+            "name": "Hypixel Housing",
+            "link": "",
+            "page": "/hypixel",
+            "description": "A group of Hypixel housings built by myself and a friend, featuring a variety of games and themes. We built these housings using Hypixel's custom housing tools and our knowledge of game design concepts.",
+            "image": "hypixel.png",
+            "tags": ["Game Design", "Minecraft"],
+            "extra": true
         }
     ],
 
     "experience": [
         {
-            "name": "MCC Game Tester",
-            "image": "mcc.png",
-            "description": "I help to test the MC Championship event and the MCC Island Minecraft server, providing feedback and bug reports to the developers."
+            "name": "Blairs Brainiacs",
+            "image": "bb.webp"
         },
         {
-            "name": "MCC Moderator",
-            "image": "mod.webp",
-            "description": "I am a volunteer moderator for MCC Island, a public Minecraft server based on the MC Championship event. I help keep the server & Discord community a fun and friendly place!"
+            "name": "MCC Testing",
+            "image": "mcc.png"
+        },
+        {
+            "name": "Noxcrew Moderation",
+            "image": "mod.webp"
         }
     ]
 }

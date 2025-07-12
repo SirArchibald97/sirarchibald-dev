@@ -6,7 +6,7 @@
         "Twitter": "dark:hover:from-sky-950 dark:hover:to-sky-600 hover:from-sky-600 hover:to-sky-300",
         "YouTube": "dark:hover:from-red-950 dark:hover:to-red-600 hover:from-red-600 hover:to-red-300",
         "Twitch": "dark:hover:from-violet-950 dark:hover:to-violet-600 hover:from-violet-600 hover:to-violet-300",
-        "Discord": "dark:hover:from-indigo-950 dark:hover:to-indigo-600 hover:from-indigo-600 hover:to-indigo-300",
+        "Bluesky": "dark:hover:from-indigo-950 dark:hover:to-indigo-600 hover:from-indigo-600 hover:to-indigo-300",
         "LinkedIn": "dark:hover:from-blue-950 dark:hover:to-blue-600 hover:from-blue-600 hover:to-blue-300",
     }
 </script>
